@@ -1,12 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projetos Integradores | Técnico em Desenvolvimento de Sistemas</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-</body>
+    <div class="background-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
 
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="ph-fill ph-code"></i>
+                <span>TDS Projects</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#projetos">Ver Projetos</a>
+                <a href="#como-usar" class="btn-primary">Como Construir?</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="badge">Para Ensino Médio Técnico</span>
+                <h1>Ideias de Projetos <br><span class="text-gradient">Integradores Full-Stack</span></h1>
+                <p>
+                    Conceitos perfeitos para Trabalho de Conclusão de Curso (TCC) ou projetos práticos.
+                    Nossas sugestões unem <strong>Front-end</strong>, <strong>Back-end</strong> e <strong>Banco de Dados</strong>
+                    em aplicações que resolvem problemas reais.
+                </p>
+                <div class="hero-actions">
+                    <button id="scrollToProjects" class="btn-primary btn-large">
+                        <i class="ph ph-rocket-launch"></i> Explorar Ideias
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projetos Recomendados</h2>
+                    <p>Filtre e encontre o desafio ideal para sua equipe de desenvolvimento.</p>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="iniciante">Iniciante</button>
+                    <button class="filter-btn" data-filter="intermediario">Intermediário</button>
+                    <button class="filter-btn" data-filter="avancado">Avançado</button>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be injected here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="como-usar" class="architecture-section">
+            <div class="container">
+                <div class="architecture-content">
+                    <div class="text-content">
+                        <h2>A Tríade do Desenvolvimento</h2>
+                        <p>Para construir essas aplicações com qualidade, foque na integração correta das três principais áreas e como elas conversam entre si.</p>
+                        
+                        <ul class="features-list">
+                            <li>
+                                <div class="feature-icon front">
+                                    <i class="ph ph-device-mobile-camera"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Front-End</h3>
+                                    <p>HTML Semântico, CSS Responsivo e manipulação de DOM/Estado com Javascript.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon back">
+                                    <i class="ph ph-server"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Back-End</h3>
+                                    <p>APIs RESTful, lógicas de negócios complexas, Autenticação, Proteção de Rotas.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-icon db">
+                                    <i class="ph ph-database"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>Banco de Dados</h3>
+                                    <p>Modelagens SQL (1:N, N:M), normalização, triggers ou soluções NoSQL ágeis.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="visual-content">
+                        <div class="code-window">
+                            <div class="window-header">
+                                <span class="dot close"></span>
+                                <span class="dot minimize"></span>
+                                <span class="dot maximize"></span>
+                                <span class="title">stack.json</span>
+                            </div>
+                            <pre><code>{
+  <span class="key">"project"</span>: <span class="string">"Full-Stack App"</span>,
+  <span class="key">"stack"</span>: {
+    <span class="key">"frontend"</span>: [<span class="string">"HTML5"</span>, <span class="string">"CSS3"</span>, <span class="string">"JS/React"</span>],
+    <span class="key">"backend"</span>: [<span class="string">"Node.js"</span>, <span class="string">"Python"</span>, <span class="string">"C#"</span>],
+    <span class="key">"database"</span>: [<span class="string">"MySQL"</span>, <span class="string">"PostgreSQL"</span>]
+  },
+  <span class="key">"students"</span>: <span class="keyword">true</span>,
+  <span class="key">"ready_for_market"</span>: <span class="keyword">true</span>
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Ideias para Técnico em Desenvolvimento de Sistemas. Criado para inspirar.</p>
+                <div class="socials">
+                    <a href="#"><i class="ph ph-github-logo"></i></a>
+                    <a href="#"><i class="ph ph-discord-logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
 </html>
